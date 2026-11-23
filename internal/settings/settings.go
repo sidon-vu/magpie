@@ -1626,7 +1626,7 @@ func (s Settings) TrayCostIn() string {
 // Themes and Langs are the accepted values, in the order the UI offers them.
 var (
 	Themes     = []string{"system", "light", "dark"}
-	Langs      = []string{"system", "en", "zh", "zh-TW", "ja", "de"}
+	Langs      = []string{"system", "en", "zh", "zh-TW", "ja", "de", "vi"}
 	Trays      = []string{"panel", "window"}
 	Currencies = []string{"usd", "cny", CurrencyByProvider}
 	// TotalCurrencies are TotalCurrency's values, "" being usd.

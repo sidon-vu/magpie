@@ -177,11 +177,11 @@ func trayLang(pref string, system func() string) string { return uilang.Pick(pre
 func systemLang() string { return uilang.System() }
 
 // notesLang is the language release notes are asked in for lang: there are
-// no German ones, so German asks for the English, and Traditional Chinese
-// asks for the Chinese ones.
+// no German or Vietnamese ones, so those ask for the English, and
+// Traditional Chinese asks for the Chinese ones.
 func notesLang(lang string) string {
 	switch lang {
-	case "de":
+	case "de", "vi":
 		return "en"
 	case "zh-TW":
 		return "zh"

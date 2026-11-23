@@ -10,10 +10,10 @@ import "strings"
 // one, else, with "system" (or none), the system's: Traditional Chinese
 // for Taiwan, Hong Kong, Macau and any zh-Hant (zh_TW.UTF-8, zh-Hant-TW),
 // Simplified for any other zh, Japanese for any ja, German for any de,
-// English for the rest.
+// Vietnamese for any vi, English for the rest.
 func Pick(pref string, system func() string) string {
 	switch pref {
-	case "en", "zh", "zh-TW", "ja", "de":
+	case "en", "zh", "zh-TW", "ja", "de", "vi":
 		return pref
 	}
 	switch sys := strings.ReplaceAll(strings.ToLower(system()), "_", "-"); {
@@ -25,6 +25,8 @@ func Pick(pref string, system func() string) string {
 		return "ja"
 	case strings.HasPrefix(sys, "de"):
 		return "de"
+	case strings.HasPrefix(sys, "vi"):
+		return "vi"
 	}
 	return "en"
 }

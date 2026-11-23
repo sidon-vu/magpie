@@ -63,7 +63,7 @@ func TestPluginWindowWordsSaidInEveryLanguage(t *testing.T) {
 		"AI Q&A",                       // orcaterm
 		"5 hours", "7 days",
 	}
-	for _, lang := range []string{"zh", "zh-TW", "ja", "de"} {
+	for _, lang := range []string{"zh", "zh-TW", "ja", "de", "vi"} {
 		for _, w := range words {
 			if _, ok := pageWords(lang)[w]; !ok {
 				t.Errorf("i18n.js's %s doesn't say %q", lang, w)

@@ -19,6 +19,8 @@ func TestPick(t *testing.T) {
 		{"system", "zh-Hant-TW", "zh-TW"},
 		{"", "zh_HK", "zh-TW"},
 		{"system", "zh-Hans-HK", "zh"},
+		{"system", "vi_VN.UTF-8", "vi"},
+		{"vi", "en-US", "vi"},
 		{"bogus", "fr-FR", "en"},
 	} {
 		if got := Pick(c.pref, func() string { return c.sys }); got != c.want {
